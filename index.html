@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday, My Love! 💗</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating Decorations -->
+    <div class="floating-hearts">
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+        <span>♥</span>
+    </div>
+
+
+    <!-- =========================================
+         SECTION 1 — OPENING
+    ========================================== -->
+
+    <section id="opening" class="page active">
+
+        <div class="card opening-card">
+
+            <div class="small-text">
+                A little something for you... ♡
+            </div>
+
+            <h1>
+                HAPPY BIRTHDAY,<br>
+                <span>MY BOYFRIEND!</span>
+            </h1>
+
+            <div class="photo-frame">
+                <img
+                    src="images/boyfriend.jpg"
+                    alt="My boyfriend"
+                    onerror="this.src='https://placehold.co/400x400/f8dce5/7b4b5a?text=His+Photo+♡'"
+                >
+            </div>
+
+            <p class="subtitle">
+                I made this little website just for you. 🥺
+            </p>
+
+            <button class="main-button" onclick="goToPage('gift-page')">
+                OPEN ♡
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         SECTION 2 — GIFT SELECTION
+    ========================================== -->
+
+    <section id="gift-page" class="page">
+
+        <div class="card">
+
+            <div class="small-text">
+                SURPRISE! 🎀
+            </div>
+
+            <h2>
+                I HAVE A GIFT<br>
+                <span>FOR YOU! ♡</span>
+            </h2>
+
+            <p class="instruction">
+                Choose a gift, my love!
+            </p>
+
+
+            <div class="gift-container">
+
+                <!-- LETTER -->
+                <button class="gift-box" onclick="openGift('letter')">
+
+                    <div class="gift-icon">
+                        💌
+                    </div>
+
+                    <h3>Letter</h3>
+
+                    <p>
+                        Something from my heart
+                    </p>
+
+                </button>
+
+
+                <!-- PICTURES -->
+                <button class="gift-box" onclick="openGift('pictures')">
+
+                    <div class="gift-icon">
+                        📸
+                    </div>
+
+                    <h3>Pictures</h3>
+
+                    <p>
+                        Three little memories
+                    </p>
+
+                </button>
+
+
+                <!-- CAKE -->
+                <button class="gift-box" onclick="openGift('cake')">
+
+                    <div class="gift-icon">
+                        🎂
+                    </div>
+
+                    <h3>Cake</h3>
+
+                    <p>
+                        A little birthday treat
+                    </p>
+
+                </button>
+
+            </div>
+
+
+            <button class="secondary-button" onclick="goToPage('date-page')">
+                I'M DONE! CONTINUE →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         GIFT POPUP
+    ========================================== -->
+
+    <div id="gift-modal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close-button" onclick="closeGift()">
+                ×
+            </button>
+
+
+            <!-- LETTER CONTENT -->
+
+            <div id="letter-content" class="gift-content">
+
+                <div class="envelope">
+                    💌
+                </div>
+
+                <h2>
+                    A Little Letter<br>
+                    <span>For You ♡</span>
+                </h2>
+
+                <div class="letter-paper">
+
+                    <p>
+                        Dear my love,
+                    </p>
+
+                    <p>
+                        Happy birthday! I hope you know how
+                        special you are to me. Thank you for
+                        being there, for making me laugh, and
+                        for being my favorite person.
+                    </p>
+
+                    <p>
+                        I hope we continue making lots of
+                        memories together. I love you so much! ♡
+                    </p>
+
+                    <p class="signature">
+                        Love,<br>
+                        Your favorite girl 💗
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PICTURES CONTENT -->
+
+            <div id="pictures-content" class="gift-content">
+
+                <h2>
+                    Our Little<br>
+                    <span>Memories 📸</span>
+                </h2>
+
+                <div class="photo-gallery">
+
+                    <div class="memory-photo">
+                        <img
+                            src="images/memory1.jpg"
+                            alt="Memory 1"
+                            onerror="this.src='https://placehold.co/350x350/f8dce5/7b4b5a?text=Memory+1'"
+                        >
+                        <p>Our first memory ♡</p>
+                    </div>
+
+                    <div class="memory-photo">
+                        <img
+                            src="images/memory2.jpg"
+                            alt="Memory 2"
+                            onerror="this.src='https://placehold.co/350x350/f5e4d5/7b4b5a?text=Memory+2'"
+                        >
+                        <p>A favorite day with you ♡</p>
+                    </div>
+
+                    <div class="memory-photo">
+                        <img
+                            src="images/memory3.jpg"
+                            alt="Memory 3"
+                            onerror="this.src='https://placehold.co/350x350/e7dff4/7b4b5a?text=Memory+3'"
+                        >
+                        <p>Another one for our memories ♡</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAKE CONTENT -->
+
+            <div id="cake-content" class="gift-content">
+
+                <h2>
+                    A Birthday Cake<br>
+                    <span>Just For You! 🎂</span>
+                </h2>
+
+                <img
+                    class="cake-gif"
+                    src="gifs/cake.gif"
+                    alt="Birthday cake"
+                    onerror="this.src='https://media.giphy.com/media/He4wudo59enf2/giphy.gif'"
+                >
+
+                <p class="cake-message">
+                    Make a wish! 🎂✨
+                </p>
+
+                <p>
+                    I wish that all your dreams come true
+                    and that I get to be beside you
+                    for many more birthdays. ♡
+                </p>
+
+            </div>
+
+
+            <button class="main-button modal-close-button" onclick="closeGift()">
+                AWWW ♡
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         SECTION 3 — DATE QUESTION
+    ========================================== -->
+
+    <section id="date-page" class="page">
+
+        <div class="card">
+
+            <div class="question-decoration">
+                🐱
+            </div>
+
+            <h2>
+                ARE YOU READY<br>
+                <span>FOR OUR DATE TODAY?</span>
+            </h2>
+
+            <p class="instruction">
+                Be honest... 👀
+            </p>
+
+            <div class="choice-buttons">
+
+                <button
+                    class="yes-button"
+                    onclick="dateAnswer('yes')"
+                >
+                    YES! 💗
+                </button>
+
+                <button
+                    class="no-button"
+                    onclick="dateAnswer('no')"
+                >
+                    NO 😭
+                </button>
+
+            </div>
+
+
+            <!-- Answer Area -->
+
+            <div id="date-result" class="result-area">
+
+                <img
+                    id="date-gif"
+                    src=""
+                    alt="Cat reaction"
+                >
+
+                <h3 id="date-message"></h3>
+
+                <button
+                    id="date-continue"
+                    class="main-button hidden"
+                    onclick="goToPage('tangible-page')"
+                >
+                    CONTINUE →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         SECTION 4 — TANGIBLE GIFT
+    ========================================== -->
+
+    <section id="tangible-page" class="page">
+
+        <div class="card">
+
+            <div class="question-decoration">
+                🎁
+            </div>
+
+            <h2>
+                DO YOU WANT TO<br>
+                <span>RECEIVE YOUR TANGIBLE GIFT NOW?</span>
+            </h2>
+
+            <p class="instruction">
+                It's waiting for you... 👀
+            </p>
+
+
+            <div class="choice-buttons">
+
+                <button
+                    class="yes-button"
+                    onclick="tangibleAnswer('yes')"
+                >
+                    YES! 🎁
+                </button>
+
+                <button
+                    class="no-button"
+                    onclick="tangibleAnswer('no')"
+                >
+                    NO 🥺
+                </button>
+
+            </div>
+
+
+            <div id="tangible-result" class="result-area">
+
+                <div id="tangible-icon" class="big-result-icon">
+                    🎁
+                </div>
+
+                <h3 id="tangible-message"></h3>
+
+                <button
+                    id="tangible-continue"
+                    class="main-button hidden"
+                    onclick="goToPage('end-page')"
+                >
+                    CONTINUE →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         SECTION 5 — END
+    ========================================== -->
+
+    <section id="end-page" class="page">
+
+        <div class="card ending-card">
+
+            <div class="confetti">
+                ✨ ♡ ✨ ♡ ✨
+            </div>
+
+            <h1>
+                HAPPY BIRTHDAY<br>
+                <span>AGAIN! ♡</span>
+            </h1>
+
+            <img
+                class="birthday-gif"
+                src="gifs/birthday.gif"
+                alt="Happy birthday"
+                onerror="this.src='https://media.giphy.com/media/g9582DNuQppxC/giphy.gif'"
+            >
+
+            <p class="final-message">
+                I hope you enjoyed your little surprise! 🥺
+            </p>
+
+            <p class="final-love">
+                I LOVE YOU SO MUCH! 💗
+            </p>
+
+            <div class="hearts">
+                ♡ ♡ ♡ ♡ ♡
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
