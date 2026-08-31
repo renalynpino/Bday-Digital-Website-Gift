@@ -21,4 +21,3 @@ python -m http.server 8000
 # open http://localhost:8000
 ```
 
-Make the repo public (if it's private) so other people can visit the link. If you want a different deploy option (Netlify or Vercel) or want me to monitor the Actions run, tell me and I'll do it.
